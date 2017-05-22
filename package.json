@@ -5,11 +5,16 @@
   "dependencies": {
     "acorn-dynamic-import": "^2.0.2",
     "bootstrap": "^3.3.7",
+    "isomorphic-fetch": "file:node_modules/isomorphic-fetch",
+    "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-bootstrap": "^0.31.0",
     "react-dom": "^15.5.4",
+    "react-redux": "^5.0.5",
     "react-router": "^4.1.1",
-    "react-router-dom": "^4.1.1"
+    "react-router-dom": "^4.1.1",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
     "eslint": "^3.19.0",

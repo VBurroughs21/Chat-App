@@ -1,71 +1,71 @@
 import React from 'react';
-import { FormGroup, ControlLabel, FormControl } from 'react-bootstrap';
+import PropTypes from 'prop-types';
+import { Form } from 'react-bootstrap';
+import FormTextInput from './FormInput';
 import '../assets/styles/App.css';
 
-class UserInfoForm extends React.Component {
-  // getInitialState() {
-  //   return {
-  //     value: '',
-  //   };
-  // }
 
-  // getValidationState() {
-  //   const length = this.state.value.length;
-  //   if (length > 10) return 'success';
-  //   else if (length > 5) return 'warning';
-  //   else if (length > 0) return 'error';
-  //   return true;
-  // }
+const UserInfoForm = ({
+  inputName,
+  inputEmail,
+  inputPassword,
+  inputConfirmation,
+  handleChange,
+}) => (
+  <Form horizontal>
+    <FormTextInput
+      label="Name"
+      type="text"
+      name="inputName"
+      value={inputName.value}
+      validation={inputName.validation}
+      inputChange={handleChange}
+    />
+    <FormTextInput
+      label="Email"
+      type="text"
+      name="inputEmail"
+      value={inputEmail.value}
+      validation={inputEmail.validation}
+      inputChange={handleChange}
+    />
+    <FormTextInput
+      label="Password"
+      type="password"
+      name="inputPassword"
+      value={inputPassword.value}
+      validation={inputPassword.validation}
+      inputChange={handleChange}
+    />
+    <FormTextInput
+      label="Confirm"
+      type="password"
+      name="inputConfirmation"
+      value={inputConfirmation.value}
+      validation={inputConfirmation.validation}
+      inputChange={handleChange}
+    />
+  </Form>
+);
 
-  // handleChange () {
-
-  // }
-  render() {
-    return (
-      <form>
-        <FormGroup
-          controlId="userInfo"
-        >
-          <ControlLabel>Name</ControlLabel>
-          <FormControl
-            type="text"
-            onChange={this.handleChange}
-          />
-          <FormControl.Feedback />
-        </FormGroup>
-        <FormGroup
-          controlId="userInfo"
-        >
-          <ControlLabel>Email</ControlLabel>
-          <FormControl
-            type="text"
-            onChange={this.handleChange}
-          />
-          <FormControl.Feedback />
-        </FormGroup>
-        <FormGroup
-          controlId="userInfo"
-        >
-          <ControlLabel>Password</ControlLabel>
-          <FormControl
-            type="password"
-            onChange={this.handleChange}
-          />
-          <FormControl.Feedback />
-        </FormGroup>
-        <FormGroup
-          controlId="userInfo"
-        >
-          <ControlLabel>Confirm</ControlLabel>
-          <FormControl
-            type="password"
-            onChange={this.handleChange}
-          />
-          <FormControl.Feedback />
-        </FormGroup>
-      </form>
-    );
-  }
-}
+UserInfoForm.propTypes = {
+  inputName: PropTypes.shape({
+    value: PropTypes.string,
+    validation: PropTypes.string,
+  }).isRequired,
+  inputEmail: PropTypes.shape({
+    value: PropTypes.string,
+    validation: PropTypes.string,
+  }).isRequired,
+  inputPassword: PropTypes.shape({
+    value: PropTypes.string,
+    validation: PropTypes.string,
+  }).isRequired,
+  inputConfirmation: PropTypes.shape({
+    value: PropTypes.string,
+    validation: PropTypes.string,
+  }).isRequired,
+  handleChange: PropTypes.func.isRequired,
+};
 
 export default UserInfoForm;
