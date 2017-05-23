@@ -27,7 +27,6 @@ const user = (
         token: null,
       });
     case CREATE_USER_SUCCESS:
-      console.log(action);
       return Object.assign({}, state, {
         isFetching: false,
         id: action.data.id,

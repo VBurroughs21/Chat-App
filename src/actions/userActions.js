@@ -10,7 +10,7 @@ export const READ_USER_SUCCESS = 'READ_USER_SUCCESS';
 export const UPDATE_USER_REQUEST = 'LOGIN_USER_REQUEST';
 export const UPDATE_USER_SUCCESS = 'LOGIN_USER_SUCCESS';
 
-
+// VB Remove data
 export function createUserRequest(data) {
   return {
     type: CREATE_USER_REQUEST,
