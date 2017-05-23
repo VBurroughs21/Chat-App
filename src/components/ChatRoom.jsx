@@ -1,6 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import ChatRoomItem from './ChatRoomItem';
 import AddChatButton from './AddChatButton';
+import Header from './shared/Header';
 import '../assets/styles/App.css';
 
 class ChatRoom extends React.Component {
@@ -20,9 +22,9 @@ class ChatRoom extends React.Component {
   render() {
     return (
       <div>
-        <header>
-          <h2>OraChat</h2>
-        </header>
+        <Header
+          title="OraChat"
+        />
         <ChatRoomItem />
         <AddChatButton submitFunction={this.addChatRoom} />
       </div>
@@ -30,4 +32,7 @@ class ChatRoom extends React.Component {
   }
 }
 
-export default ChatRoom;
+export default connect((state) => state, {
+  // loginUser,
+})(ChatRoom);
+

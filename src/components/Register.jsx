@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import Header from './Header';
-import UserInfoForm from './UserInfoForm';
+import Header from './shared/Header';
+import UserInfoForm from './shared/UserInfoForm';
 import { createUser } from '../actions/userActions';
 import '../assets/styles/App.css';
 
@@ -84,7 +84,8 @@ class Register extends React.Component {
           right="Register"
           left="Login"
           title="OraChat"
-          onSubmit={this.handleSubmit}
+          rightClick={this.handleSubmit}
+          leftClick="/login"
         />
         <UserInfoForm
           inputName={this.state.inputName}

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FormGroup, ControlLabel, FormControl } from 'react-bootstrap';
-import '../assets/styles/App.css';
+// import '../assets/styles/App  /.css';
 
 const FormTextInput = ({ label, type, name, value, validation, inputChange }) => (
   <FormGroup
@@ -25,6 +25,7 @@ FormTextInput.propTypes = {
   name: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
   inputChange: PropTypes.func.isRequired,
+  validation: PropTypes.string,
 };
 
 FormTextInput.defaultProps = {
