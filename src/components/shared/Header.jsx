@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Navbar, NavItem } from 'react-bootstrap';
-// import '../assets/styles/App.css';
 
 const Header = ({ right, title, left, rightClick, leftClick }) => (
   <Navbar>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router';
 import Register from '../components/Register';
-import ChatRoom from '../components/ChatRoom';
+import Chat from '../containers/Chat';
 import Login from '../components/Login';
 import '../assets/styles/App.css';
 
@@ -10,7 +10,7 @@ const Main = () => (
     <Switch>
       <Route exact path="/register" component={Register} />
       <Route exact path="/login" component={Login} />
-      <Route exact path="/chat-rooms" component={ChatRoom} />
+      <Route path="/chat" component={Chat} />
     </Switch>
   </main>
 );

@@ -1,10 +1,11 @@
 import React from 'react';
+// import { connect } from 'react-redux';
 import ChatRoomItem from '../components/ChatRoomItem';
 import AddChatButton from '../components/AddChatButton';
 import Header from '../components/shared/Header';
 import '../assets/styles/App.css';
 
-class ChatRoom extends React.Component {
+class ChatRoomList extends React.Component {
   // getInitialState() {
   //   return {
   //     value: '',
@@ -24,7 +25,7 @@ class ChatRoom extends React.Component {
         <Header
           title="OraChat"
         />
-        <p>Chat room list</p>
+        <p>Searchbar!!!!!!!</p>
         <ChatRoomItem />
         <AddChatButton submitFunction={this.addChatRoom} />
       </div>
@@ -36,5 +37,5 @@ class ChatRoom extends React.Component {
 //   // loginUser,
 // })(Chat);
 
-export default ChatRoom;
+export default ChatRoomList;
 
