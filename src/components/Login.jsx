@@ -66,7 +66,7 @@ class Login extends React.Component {
       <div>
         {this.props.user.id ?
           <Redirect to={{
-            pathname: '/register',
+            pathname: '/chat/rooms',
             state: { from: this.props.location },
           }}
           />
@@ -86,7 +86,6 @@ class Login extends React.Component {
             />
           </div>
         }
-        
       </div>
     );
   }
@@ -96,6 +95,7 @@ Login.propTypes = {
   user: PropTypes.shape({
     id: null,
     email: PropTypes.string,
+    name: null,
     token: PropTypes.string,
   }).isRequired,
   location: PropTypes.oneOfType([

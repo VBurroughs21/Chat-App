@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { Switch, Route } from 'react-router';
 import ChatRoomList from '../components/ChatRoomList';
 import ChatRoom from '../components/ChatRoom';
+import Account from '../components/Account';
 import Footer from '../components/Footer';
 import '../assets/styles/App.css';
 
@@ -27,6 +28,7 @@ class Chat extends React.Component {
         <Switch>
           <Route path={`${this.props.match.url}/rooms`} component={ChatRoomList} />
           <Route path={`${this.props.match.url}/room/:id`} component={ChatRoom} />
+          <Route path={`${this.props.match.url}/account`} component={Account} />
         </Switch>
         <Footer />
       </div>
