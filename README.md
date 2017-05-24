@@ -15,6 +15,6 @@
 
 *Created using React's recommended [Create React App](https://github.com/facebookincubator/create-react-app)*
 
-#### [Scripts] (https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#available-scripts)
+[Scripts](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#available-scripts)
 
-#### [Deployment] (https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#deployment)
+[Deployment] (https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#deployment)
